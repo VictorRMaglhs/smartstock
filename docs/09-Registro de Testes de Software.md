@@ -35,3 +35,27 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 |Registro de evidência | <figure><img src="img/tela registro efetuado.png"> </figure> | 
 |Registro de evidência | <figure><img src="img/tabela lista de fornecedor .png"> </figure> |
 |Registro de evidência | <figure><img src="img/php fornecedor.png"> </figure> | 
+
+
+## Caso de Teste 002: Execução de Consultas SQL
+
+| **Caso de Teste** 	| **CT-02 – Gestão de estoque 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-14 - O sistema deve permitir a execução de consultas SQL em um banco de dados e a formatação dos dados retornados para exibição em uma página HTML.|
+|Registro de evidência | <figure><img src="img/lista_usuario.png"> </figure> |
+|Registro de evidência | <figure><img src="img/dados_usuario.png"> </figure> | 
+
+---
+
+## Caso de Teste 004: Visualização de Relatório de Estoque
+
+| **Número do Caso de Teste** | CT-004 - Gestão de estoque|
+|-------------------------------|--------|
+| **Pré-condições**             | Produtos cadastrados no sistema. Usuário autenticado como Analista de Estoque. |
+| **Procedimento**              | 1. Acessar o menu "Relatórios".<br>2. Selecionar "Relatório de Estoque".<br>3. Filtrar por categoria "Alimentos".<br>4. Clicar em "Gerar Relatório". |
+| **Dados de Entrada**          | Categoria: Alimentos |
+| **Resultado Esperado**        | Relatório exibido com a lista detalhada de produtos na categoria "Alimentos". |
+| **Resultado Obtido**          | O princípio de um relatório está sendo gerado, porém o sistema por ainda ser um protótipo, não possui o mapeamento de telas nem filtragem de dados. |
+| **Avaliação**                 | [Sucesso] |
+| **Evidência**                 | [<figure><img src="img/tela gestao de estoque.png"> </figure>
+<figure><img src="img/produtos_banco.png"> </figure>] |
