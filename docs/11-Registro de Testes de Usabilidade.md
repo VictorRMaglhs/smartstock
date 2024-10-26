@@ -154,3 +154,30 @@ A tela de cadastro de usuário foi bem-sucedida nos testes e atende a maioria do
 
 ## Conclusão Geral
 O Cadastro de Fornecedor atende à maioria dos requisitos funcionais, mas apresenta algumas oportunidades de melhoria, especialmente na validação de campos críticos como CNPJ e telefone. O design da interface é simples e funcional, proporcionando uma boa experiência geral, mas pode ser enriquecido com feedbacks mais claros e ferramentas de preenchimento automático para aumentar a eficiência e evitar erros.
+
+----------
+
+# Tela de Gestão de Estoque
+
+## 1. Listagem de Produtos com Checkbox
+- **Observação**: A tela exibe corretamente a lista de produtos, cada um com um checkbox ao lado, permitindo ao usuário selecionar ou desmarcar produtos conforme necessário.
+- **Impacto**: Alto. A seleção de produtos facilita a manipulação em massa e a gestão dos itens em estoque.
+
+## 2. Atualização Visual ao Marcar Produtos
+- **Observação**: Ao marcar um produto, o ícone de check aparece visualmente, e ao desmarcar o produto, o ícone desaparece.
+- **Impacto**: Alto. O feedback visual garante que o usuário entenda rapidamente quais itens foram selecionados, melhorando a experiência de uso.
+
+## 3. Validação de ID de Produto
+- **Observação**: Cada produto listado está associado corretamente ao ID correspondente do banco de dados, garantindo a consistência entre os dados da interface e os dados internos.
+- **Impacto**: Alto. Essa consistência é essencial para evitar confusões e erros ao manipular os produtos.
+
+## 4. Marcação e Desmarcação Correta dos Checkboxes
+- **Observação**: A funcionalidade de marcar e desmarcar checkboxes funciona conforme esperado, possibilitando a seleção múltipla sem erros ou conflitos.
+- **Impacto**: Médio. Facilita a seleção de produtos específicos de forma intuitiva, sem exigir ações complexas do usuário.
+
+## 5. Verificação da Consistência dos Dados
+- **Observação**: Cada produto marcado ou desmarcado mantém suas informações intactas, sem alterações nos dados exibidos ao interagir com o checkbox.
+- **Impacto**: Médio. A integridade dos dados ao interagir com os checkboxes evita erros no gerenciamento e facilita a rastreabilidade dos itens selecionados.
+
+## Conclusão Geral
+A tela de gestão de estoque passou nos testes de usabilidade, fornecendo uma interface intuitiva e responsiva para selecionar, visualizar e verificar produtos. O feedback visual e a consistência dos dados asseguram uma experiência de uso positiva, essencial para a gestão eficiente de estoque.
