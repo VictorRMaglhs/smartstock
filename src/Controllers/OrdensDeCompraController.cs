@@ -41,52 +41,54 @@ public class OrdemDeCompraController : Controller
     public IActionResult GetOrdensDeCompra()
     {
         var ordensDeCompra = _context.OrdemDeCompra
-          .Include(o => o.Fornecedor)
-          .Include(o => o.Usuario)
-          .Join(
-              _context.OrdemDeCompraProduto,
-              ordem => ordem.Id,
-              ordemProduto => ordemProduto.OrdemDeCompraId,
-              (ordem, ordemProduto) => new
-              {
-                  Ordem = ordem,
-                  Produto = ordemProduto
-              })
-          .Join(
-              _context.Produto,
-              op => op.Produto.ProdutoId,
-              produto => produto.id,
-              (op, produto) => new
-              {
-                  op.Ordem.Id,
-                  op.Ordem.DataCriacao,
-                  op.Ordem.Status,
-                  op.Ordem.Total,
-                  FornecedorRazao = op.Ordem.Fornecedor != null ? op.Ordem.Fornecedor.razao : "Fornecedor não informado",
-                  UsuarioNome = op.Ordem.Usuario != null ? op.Ordem.Usuario.Nome : "Usuário não informado",
-                  ProdutoNome = produto.nome,
-                  Quantidade = op.Produto.Quantidade,
-                  PrecoProduto = produto.preco,
-                  TotalProduto = op.Produto.Quantidade * produto.preco
-              })
-          .GroupBy(x => x.Id)
-          .Select(g => new
-          {
-              Id = g.Key,
-              DataCriacao = g.First().DataCriacao,
-              Status = g.First().Status,
-              Total = g.First().Total,
-              FornecedorRazao = g.First().FornecedorRazao,
-              UsuarioNome = g.First().UsuarioNome,
-              Produtos = g.Select(p => new
-              {
-                  p.ProdutoNome,
-                  p.Quantidade,
-                  p.PrecoProduto,
-                  p.TotalProduto
-              }).ToList()
-          })
-          .ToList();
+           .Include(o => o.Fornecedor)
+           .Include(o => o.Usuario)
+           .Join(
+               _context.OrdemDeCompraProduto,
+               ordem => ordem.Id,
+               ordemProduto => ordemProduto.OrdemDeCompraId,
+               (ordem, ordemProduto) => new
+               {
+                   Ordem = ordem,
+                   Produto = ordemProduto
+               })
+           .Join(
+               _context.Produto,
+               op => op.Produto.ProdutoId,
+               produto => produto.id,
+               (op, produto) => new
+               {
+                   op.Ordem.Id,
+                   op.Ordem.DataCriacao,
+                   op.Ordem.Status,
+                   op.Ordem.Total,
+                   FornecedorRazao = op.Ordem.Fornecedor != null ? op.Ordem.Fornecedor.razao : "Fornecedor não informado",
+                   UsuarioNome = op.Ordem.Usuario != null ? op.Ordem.Usuario.Nome : "Usuário não informado",
+                   ProdutoNome = produto.nome,
+                   Quantidade = op.Produto.Quantidade,
+                   PrecoProduto = produto.preco,
+                   TotalProduto = op.Produto.Quantidade * produto.preco
+               })
+           .GroupBy(x => x.Id)
+           .Select(g => new
+           {
+               Id = g.Key,
+               DataCriacao = g.First().DataCriacao,
+               Status = g.First().Status,
+               Total = g.First().Total,
+               FornecedorRazao = g.First().FornecedorRazao,
+               UsuarioNome = g.First().UsuarioNome,
+               Produtos = g.Select(p => new
+               {
+                   p.ProdutoNome,
+                   p.Quantidade,
+                   p.PrecoProduto,
+                   p.TotalProduto
+               }).ToList()
+           })
+           .OrderBy(o => o.Status) // Ordena pelo Status, com status 0 primeiro
+           .ToList();
+
 
 
         return Json(ordensDeCompra);
