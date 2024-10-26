@@ -130,8 +130,9 @@ em construcao
 ### Requisitos Funcionais
 
 | ID    | Descrição dos Requisitos Funcionais  | Tela Página Cadastro de Ordem de Compra | Responsável |
-|------|-----------------------------------------|---------------------------------------|-------------|
-| RF-03 | O sistema deve permitir a edição de itens cadastrados. | | Michael Brasil |
+|-------|--------------------------------------|-----------------------------------------|-------------|
+| RF-01 | O sistema deve permitir o cadastro de uma nova uordem de compra com usuário, fornecedor, produtos e status |  | Victor Magalhães |
+| RF-03 | O sistema deve permitir a aprovação de ordens de compra cadastradas. | | Victor Magalhães |
 
 <br/>
 
