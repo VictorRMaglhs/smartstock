@@ -57,6 +57,6 @@ Para cada caso de teste definido no Plano de Testes de Software, realize o regis
 | **Resultado Esperado**        | Relatório exibido com a lista detalhada de produtos na categoria "Alimentos". |
 | **Resultado Obtido**          | O princípio de um relatório está sendo gerado, porém o sistema por ainda ser um protótipo, não possui o mapeamento de telas nem filtragem de dados. |
 | **Avaliação**                 | [Sucesso] |
-| **Evidência**                 | <figure><img src="img/tela_gestao_de_estoque.png" alt="Tela de Gestão de Estoque"></figure><figure><img src="img/produtos_banco.png" alt="Produtos no Banco de Dados"></figure> |
+| **Evidência**                 | <figure><img src="img/tela gestao de estoque.png" alt="Tela de Gestão de Estoque"></figure><figure><img src="img/produtos_banco.png" alt="Produtos no Banco de Dados"></figure> |
 
 
