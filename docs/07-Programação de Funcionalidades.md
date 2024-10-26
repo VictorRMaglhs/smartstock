@@ -131,8 +131,8 @@ em construcao
 
 | ID    | Descrição dos Requisitos Funcionais  | Tela Página Cadastro de Ordem de Compra | Responsável |
 |-------|--------------------------------------|-----------------------------------------|-------------|
-| RF-01 | O sistema deve permitir o cadastro de uma nova uordem de compra com usuário, fornecedor, produtos e status |  | Victor Magalhães |
-| RF-03 | O sistema deve permitir a aprovação de ordens de compra cadastradas. | | Victor Magalhães |
+| RF-01 | O sistema deve permitir o cadastro de uma nova ordem de compra com usuário, fornecedor, produtos e status | OrdemDeCompra/CadastroOrdemDeCompra | Victor Magalhães |
+| RF-03 | O sistema deve permitir a aprovação de ordens de compra cadastradas. | OrdemDeCompra/OrdensDeCompra | Victor Magalhães |
 
 <br/>
 
@@ -140,11 +140,11 @@ em construcao
 
 | ID    | Descrição dos Requisitos Não Funcionais  | Tela Página Cadastro de Ordem de Compra | Responsável |
 |------|-----------------------------------------|---------------------------------------|-------------|
-| RNF-01 | O sistema deve ter uma interface simples e fácil de usar, com design básico para facilitar a navegação para os funcionários da empresa. | | Michael Brasil |
-| RNF-02 | O sistema deve ter uma estrutura de código clara e bem documentada, para facilitar a compreensão e manutenção por estudantes. | | Michael Brasil |
-| RNF-03 | O sistema deve ser responsivo o suficiente para ser usado em diferentes tamanhos de tela, como monitores e laptops. | | Michael Brasil |
-| RNF-04 | O sistema deve carregar rapidamente, com um tempo de resposta menor ou igual a 3 segundos. | | Michael Brasil |
-| RNF-05 | O sistema deve ser acessível para navegadores web comuns (Chrome, Firefox) sem necessidade de plugins extras. | | Michael Brasil |
+| RNF-01 | O sistema deve ter uma interface simples e fácil de usar, com design básico para facilitar a navegação para os funcionários da empresa. | OrdemDeCompra/CadastroOrdemDeCompra; OrdemDeCompra/OrdensDeCompra | Victor Magalhães |
+| RNF-02 | O sistema deve ter uma estrutura de código clara e bem documentada, para facilitar a compreensão e manutenção por estudantes. | OrdemDeCompra/CadastroOrdemDeCompra; OrdemDeCompra/OrdensDeCompra | Victor Magalhães |
+| RNF-03 | O sistema deve ser responsivo o suficiente para ser usado em diferentes tamanhos de tela, como monitores e laptops. | OrdemDeCompra/CadastroOrdemDeCompra; OrdemDeCompra/OrdensDeCompra | Victor Magalhães |
+| RNF-04 | O sistema deve carregar rapidamente, com um tempo de resposta menor ou igual a 3 segundos. | OrdemDeCompra/CadastroOrdemDeCompra; OrdemDeCompra/OrdensDeCompra | Victor Magalhães |
+| RNF-05 | O sistema deve ser acessível para navegadores web comuns (Chrome, Firefox) sem necessidade de plugins extras. | OrdemDeCompra/CadastroOrdemDeCompra; OrdemDeCompra/OrdensDeCompra | Victor Magalhães |
 
 <br/>
 
