@@ -69,13 +69,13 @@ public class OrdemDeCompraController : Controller
                   PrecoProduto = produto.preco,
                   TotalProduto = op.Produto.Quantidade * produto.preco
               })
-          .GroupBy(x => x.Id) // Agrupar apenas pelo ID da ordem
+          .GroupBy(x => x.Id)
           .Select(g => new
           {
               Id = g.Key,
-              DataCriacao = g.First().DataCriacao, // Pega a data da primeira ocorrência
-              Status = g.First().Status, // Pega o status da primeira ocorrência
-              Total = g.First().Total, // Pega o total da primeira ocorrência
+              DataCriacao = g.First().DataCriacao,
+              Status = g.First().Status,
+              Total = g.First().Total,
               FornecedorRazao = g.First().FornecedorRazao,
               UsuarioNome = g.First().UsuarioNome,
               Produtos = g.Select(p => new
@@ -134,7 +134,7 @@ public class OrdemDeCompraController : Controller
             return NotFound();
         }
 
-        ordem.Status = "1";  // Atualiza o status para "Aprovado"
+        ordem.Status = "1";
         _context.SaveChanges();
 
         return Ok();
