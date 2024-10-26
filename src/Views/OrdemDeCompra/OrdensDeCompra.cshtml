@@ -90,12 +90,12 @@
                     const row = table.row(`#row_${id}`);
                     row.data([
                         id,
-                        row.data()[1], // Fornecedor
-                        row.data()[2], // Usuário
-                        row.data()[3], // Data
-                        row.data()[4], // Total
-                        '<span class="text-success"><i class="fas fa-check-circle"></i> Aprovada</span>', // Status atualizado
-                        `<button class="btn btn-secondary" disabled><i class="fas fa-check"></i> Aprovado</button>` // Botão atualizado
+                        row.data()[1], //! Fornecedor
+                        row.data()[2], //! Usuário
+                        row.data()[3], //! Data
+                        row.data()[4], //! Total
+                        '<span class="text-success"><i class="fas fa-check-circle"></i> Aprovada</span>',
+                        `<button class="btn btn-secondary" disabled><i class="fas fa-check"></i> Aprovado</button>`
                     ]).draw(false);
 
                     Swal.fire({
