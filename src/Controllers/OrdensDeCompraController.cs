@@ -86,10 +86,8 @@ public class OrdemDeCompraController : Controller
                    p.TotalProduto
                }).ToList()
            })
-           .OrderBy(o => o.Status) // Ordena pelo Status, com status 0 primeiro
+           .OrderBy(o => o.Status)
            .ToList();
-
-
 
         return Json(ordensDeCompra);
     }
