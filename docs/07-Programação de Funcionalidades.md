@@ -2,6 +2,9 @@
 
 
 # Instruções de acesso:
+
+https://smartstock-fjfcetdsg4ahfwcv.brazilsouth-01.azurewebsites.net/Home
+
 em construcao
 
 --------------
