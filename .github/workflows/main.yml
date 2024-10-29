@@ -21,7 +21,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.DEPLOY }}
       # Sincroniza as alterações da branch 'main' do upstream para o repositório clonado
-      - name: Merge Upstream Changes
+      - name: Merge Repo Changes
         run: |
           git checkout main
           git fetch https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-2-E2-Proj-Smart-Stock.git main
