@@ -25,5 +25,5 @@ jobs:
         run: |
           git checkout main
           git fetch https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-2-E2-Proj-Smart-Stock.git main
-          git pull https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-2-E2-Proj-Smart-Stock.git main --no-edit
+          git pull https://x-access-token:${{ secrets.DEPLOY }}@github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-2-E2-Proj-Smart-Stock.git main --no-edit
           git push origin main
