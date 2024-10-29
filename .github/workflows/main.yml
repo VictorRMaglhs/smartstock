@@ -2,18 +2,23 @@ name: Sync with Original Repository
 
 on:
   schedule:
-    # Executa o workflow a cada hora (ajuste conforme necessário)
     - cron: '* * * * *' # A cada 1 min
 
 jobs:
   sync:
-    # Usa o runner padrão do GitHub (não precisa configurar nada localmente)
     runs-on: ubuntu-latest
 
     steps:
       # Checkout do repositório clonado
       - name: Checkout Cloned Repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # Garante que todo o histórico seja baixado
+
+      # Adiciona o repositório upstream
+      - name: Add Upstream Repository
+        run: |
+          git remote add upstream https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-2-E2-Proj-Smart-Stock.git
 
       # Sincroniza as alterações da branch 'main' do upstream para o repositório clonado
       - name: Merge Upstream Changes
