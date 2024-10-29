@@ -24,6 +24,6 @@ jobs:
       - name: Merge Upstream Changes
         run: |
           git checkout main
-          git fetch upstream main
-          git pull upstream main --no-edit
+          git fetch https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-2-E2-Proj-Smart-Stock.git main
+          git pull https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-2-E2-Proj-Smart-Stock.git main --no-edit
           git push origin main
