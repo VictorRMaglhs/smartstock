@@ -25,5 +25,5 @@ jobs:
         run: |
           git checkout main
           git fetch upstream main
-          git merge upstream/main
+          git merge upstream/main -m "Sincronização com upstream: $(date '+%Y-%m-%d %H:%M:%S')"
           git push origin main
