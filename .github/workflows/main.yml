@@ -3,7 +3,7 @@ name: Sync with Original Repository
 on:
   schedule:
     # Executa o workflow a cada hora (ajuste conforme necessário)
-    - cron: '* * * * *' # A cada 1 hora
+    - cron: '* * * * *' # A cada 1 min
 
 jobs:
   sync:
@@ -18,7 +18,6 @@ jobs:
       # Configura o repositório original como upstream
       - name: Set Upstream
         run: |
-          git remote add upstream https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-2-E2-Proj-Smart-Stock.git
           git fetch upstream
 
       # Sincroniza as alterações da branch 'main' do upstream para o repositório clonado
