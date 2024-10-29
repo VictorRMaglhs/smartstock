@@ -15,11 +15,6 @@ jobs:
       - name: Checkout Cloned Repository
         uses: actions/checkout@v2
 
-      # Configura o repositório original como upstream
-      - name: Set Upstream
-        run: |
-          git fetch upstream
-
       # Sincroniza as alterações da branch 'main' do upstream para o repositório clonado
       - name: Merge Upstream Changes
         run: |
