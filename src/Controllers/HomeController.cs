@@ -57,17 +57,18 @@ public class HomeController : Controller
         var fornecedoresDb = _context.Fornecedor.ToList();
         Console.WriteLine($"Dados da table fornecedor: {fornecedoresDb} size: {fornecedoresDb.Count}");
 
-        var fornecedoresView = new List<FornecedorView>(); 
+        var fornecedoresView = new List<FornecedorView>();
 
         foreach (Fornecedor fornecedorDb in fornecedoresDb)
         {
             Console.WriteLine($"Dados do fornecedor id: {fornecedorDb.id}, razao: {fornecedorDb.razao}");
 
-           fornecedoresView.Add(new FornecedorView { 
-                nome = fornecedorDb.razao, 
-                email = fornecedorDb.email, 
+            fornecedoresView.Add(new FornecedorView
+            {
+                nome = fornecedorDb.razao,
+                email = fornecedorDb.email,
                 cnpj = "",
-                endereco = "", 
+                endereco = "",
                 telefone = fornecedorDb.telefone,
             });
         }
@@ -78,7 +79,7 @@ public class HomeController : Controller
         };
 
         return View(tabelaDeFornecedorView);
-    
+
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
@@ -97,7 +98,7 @@ public class HomeController : Controller
         if (ModelState.IsValid)
         {
             // Aqui você pode salvar os dados, por exemplo, em um banco de dados
-            
+
             //Convertendo modelo a Fornecedor
             Fornecedor fornecedor = new Fornecedor();
             fornecedor.razao = modelo.nome;
@@ -123,9 +124,10 @@ public class HomeController : Controller
     {
         Console.WriteLine($"Dados que chegaram nome: {modelo.nome}, descricao {modelo.descricao}, preco: {modelo.preco}, categoria: {modelo.categoria}"); //agora testo no html e depois continuo a etapa
         Console.WriteLine($"Model is valid?: {ModelState.IsValid}");
-        if (ModelState.IsValid){
-             // Aqui você pode salvar os dados, por exemplo, em um banco de dados
-            
+        if (ModelState.IsValid)
+        {
+            // Aqui você pode salvar os dados, por exemplo, em um banco de dados
+
             //Convertendo modelo a Fornecedor
             Produto produto = new Produto();
             produto.nome = modelo.nome;
@@ -171,7 +173,7 @@ public class HomeController : Controller
             _context.Usuario.Add(usuario); // Adiciona o Usuario ao contexto
             _context.SaveChanges(); // Salva as mudanças no banco de dados
 
-           
+
             return RedirectToAction("Sucesso"); // Redireciona após salvar
 
         }
@@ -248,5 +250,4 @@ public class HomeController : Controller
 
 
 
- 
-    
+
