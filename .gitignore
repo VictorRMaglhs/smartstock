@@ -1,0 +1,5 @@
+mysql_data
+
+src/obj/*
+src/bin/*
+.vs/
