@@ -18,6 +18,8 @@ jobs:
       - name: Add Upstream Repository
         run: |
           git remote add upstream https://github.com/ICEI-PUC-Minas-PMV-ADS/PMV-ADS-2024-2-E2-Proj-Smart-Stock.git
+        env:
+          GITHUB_TOKEN: ${{ secrets.DEPLOY }}
       # Sincroniza as alterações da branch 'main' do upstream para o repositório clonado
       - name: Merge Upstream Changes
         run: |
